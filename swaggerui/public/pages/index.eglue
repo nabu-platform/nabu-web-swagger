@@ -5,26 +5,26 @@
   <title>Swagger UI</title>
   <link rel="icon" type="image/png" href="/resources/swaggerui/images/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/resources/swaggerui/images/favicon-16x16.png" sizes="16x16" />
-  <link href='/resources/swaggerui/css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
-  <link href='/resources/swaggerui/css/reset.css' media='screen' rel='stylesheet' type='text/css'/>
-  <link href='/resources/swaggerui/css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
-  <link href='/resources/swaggerui/css/reset.css' media='print' rel='stylesheet' type='text/css'/>
-  <link href='/resources/swaggerui/css/print.css' media='print' rel='stylesheet' type='text/css'/>
+  <link href='${server.root()}resources/swaggerui/css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='${server.root()}resources/swaggerui/css/reset.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='${server.root()}resources/swaggerui/css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
+  <link href='${server.root()}resources/swaggerui/css/reset.css' media='print' rel='stylesheet' type='text/css'/>
+  <link href='${server.root()}resources/swaggerui/css/print.css' media='print' rel='stylesheet' type='text/css'/>
 
-  <script src='/resources/swaggerui/lib/object-assign-pollyfill.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/jquery-1.8.0.min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/jquery.slideto.min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/jquery.wiggle.min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/handlebars-4.0.5.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/lodash.min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/backbone-min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/swagger-ui.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/jsoneditor.min.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/marked.js' type='text/javascript'></script>
-  <script src='/resources/swaggerui/lib/swagger-oauth.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/object-assign-pollyfill.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/jquery-1.8.0.min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/jquery.slideto.min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/jquery.wiggle.min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/handlebars-4.0.5.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/lodash.min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/backbone-min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/swagger-ui.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/jsoneditor.min.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/marked.js' type='text/javascript'></script>
+  <script src='${server.root()}resources/swaggerui/lib/swagger-oauth.js' type='text/javascript'></script>
 
   <!-- Some basic translations -->
   <!-- <script src='/resources/swaggerui/lang/translator.js' type='text/javascript'></script> -->
@@ -37,7 +37,7 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "/swagger.json";
+        url = window.location.href.replace(new RegExp("/swaggerui/index(#.*|)"), "/swagger.json");
       }
 
       hljs.configure({
@@ -91,7 +91,7 @@
 <body class="swagger-section">
 <div id='header'>
   <div class="swagger-ui-wrap">
-    <a id="logo" href="http://swagger.io"><img class="logo__img" alt="swagger" height="30" width="30" src="/resources/swaggerui/images/logo_small.png" /><span class="logo__title">swagger</span></a>
+    <a id="logo" href="http://swagger.io"><img class="logo__img" alt="swagger" height="30" width="30" src="${server.root()}resources/swaggerui/images/logo_small.png" /><span class="logo__title">swagger</span></a>
     <form id='api_selector'>
       <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text"/></div>
       <div id='auth_container'></div>
