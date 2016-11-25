@@ -25,5 +25,25 @@
 			<artifactId>component</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>nabu.misc</groupId>
+			<artifactId>keystore</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.protocols.http</groupId>
+			<artifactId>client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.protocols.http</groupId>
+			<artifactId>server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.types</groupId>
+			<artifactId>xml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web.rest</groupId>
+			<artifactId>provider</artifactId>
+		</dependency>
 	</dependencies>
 </project>
