@@ -1,3 +1,13 @@
+.swagger-section .operationId {
+	font-size: 0.7em;
+	color: #666;
+	margin-left: 15px !important;
+}
+
+.swagger-section .path {
+	font-size: 0.9em;
+}
+
 /* Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org> */
 .swagger-section pre code {
   display: block;
