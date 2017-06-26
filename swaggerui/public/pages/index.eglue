@@ -36,8 +36,12 @@
       var url = window.location.search.match(/url=([^&]+)/);
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
-      } else {
+      }
+      else if (window.location.href.indexOf('/swaggerui/index') >= 0) {
         url = window.location.href.replace(new RegExp("/swaggerui/index(#.*|)"), "/swagger.json");
+      }
+      else {
+        url = window.location.href.replace(new RegExp("/swaggerui"), "/swagger.json");
       }
 
       hljs.configure({
