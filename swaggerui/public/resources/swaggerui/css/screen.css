@@ -1,3 +1,7 @@
+.swagger-section .markdown img {
+	max-width: 100%;
+}
+
 .swagger-section .operationId {
 	font-size: 0.7em;
 	color: #666;

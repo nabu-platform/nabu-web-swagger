@@ -335,7 +335,11 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
     + alias3((helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,(depth0 != null ? depth0.nickname : depth0),{"name":"sanitize","hash":{},"data":data}))
     + "' class=\"toggleOperation\"><span class=\"markdown\">"
     + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.summary : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
-    + "</span></a>\n          </li>\n        </ul>\n      </div>\n      <div class='content' id='"
+    + "</span></a>\n          </li>\n        "
+    
+    + (depth0 && depth0.operation && depth0.operation["x-reference"] ? "<li><span class='options' style='font-weight:bold'>" + depth0.operation["x-reference"] + "</span></li>" : "")
+    
+    + "</ul>\n      </div>\n      <div class='content' id='"
     + alias3((helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,(depth0 != null ? depth0.encodedParentId : depth0),{"name":"sanitize","hash":{},"data":data}))
     + "_"
     + alias3((helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,(depth0 != null ? depth0.nickname : depth0),{"name":"sanitize","hash":{},"data":data}))
@@ -20838,7 +20842,6 @@ Request.prototype.end = function(fn){
     if (!serialize && isJSON(contentType)) serialize = request.serialize['application/json'];
     if (serialize) data = serialize(data);
   }
-
   // set header fields
   for (var field in this.header) {
     if (null == this.header[field]) continue;

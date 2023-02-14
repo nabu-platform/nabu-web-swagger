@@ -48,7 +48,6 @@
         highlightSizeThreshold: 5000
       });
 
-      // Pre load translate...
       if(window.SwaggerTranslator) {
         window.SwaggerTranslator.translate();
       }
