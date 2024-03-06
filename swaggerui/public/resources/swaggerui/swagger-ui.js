@@ -338,6 +338,7 @@ templates['operation'] = template({"1":function(container,depth0,helpers,partial
     + "</span></a>\n          </li>\n        "
     
     + (depth0 && depth0.operation && depth0.operation["x-reference"] ? "<li><span class='options' style='font-weight:bold'>" + depth0.operation["x-reference"] + "</span></li>" : "")
+    + (depth0 && depth0.operation && depth0.operation["x-stubbed"] && depth0.operation["x-stubbed"] == "true" ? "<li><span class='options' style='font-weight:bold'>STUBBED</span></li>" : "")
     
     + "</ul>\n      </div>\n      <div class='content' id='"
     + alias3((helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,(depth0 != null ? depth0.encodedParentId : depth0),{"name":"sanitize","hash":{},"data":data}))
